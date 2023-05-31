@@ -11,7 +11,7 @@ public class TasksTest {
 
 
         Task expected = simpleTask;
-        Task actual = task.matches(false);
+        Task actual = task.matches();
 
         Assertions.assertEquals(expected, actual);
 
