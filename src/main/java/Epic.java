@@ -3,7 +3,7 @@ public class Epic extends Task {
 
     public Epic(int id, String[] subtasks) {
         super(id); // вызов родительского конструктора
-        subtasks = subtasks; // заполнение своих полей
+        this.subtasks = subtasks; // заполнение своих полей
     }
 
     public String[] getSubtasks() {
@@ -14,8 +14,8 @@ public class Epic extends Task {
     @Override
     public boolean matches(String query) {
 
-        for (String task : subtasks) {
-            if (task.contains(query)) {
+        for (String subtask : subtasks) {
+            if (subtask.contains(query)) {
                 return true;
             }
         }
